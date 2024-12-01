@@ -1,0 +1,33 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Bunker 08",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "bunker08",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.concrete_cast_hs_01#28794",
+        "facepunch.concrete_cast_hs_02#37803",
+        "facepunch.concrete_trim_02#43472",
+        "facepunch.concrete_wall_bare_02#47059",
+        "facepunch.floor_tile_blend_01#28812",
+        "facepunch.plaster_hs_01#33578",
+        "facepunch.plaster_hs_02#28800",
+        "fpopium.light_switch#54976",
+        "fpopium.plaster_f#55193",
+        "gbonn.concretetiledfloor#49286",
+        "saandy.shower_drain#19943",
+        "tridge.plaster_black#31730"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "map/bunker_08.vmap"
+      }
+    }
+  }
+}
