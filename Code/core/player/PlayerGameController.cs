@@ -1,4 +1,4 @@
-using Sandbox;
+﻿using Sandbox;
 using System;
 
 public enum MovementState
@@ -239,6 +239,7 @@ public sealed class PlayerGameController : Component
 
 		var velocity = direction.Normal * MovementSpeed * CurrentMovementMultiplier;
 
+		// во тут ржака
 		WorldPosition += new Vector3( 0, 0, 0.001f );
 
 		if( velocity.Length != 0)

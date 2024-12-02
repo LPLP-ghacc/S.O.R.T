@@ -1,0 +1,36 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+    <div class="ui">
+        <div class="header">
+            <b>@FPSCounter</b>
+        </div>
+        <div class="body">
+            <b>text</b>
+        </div>
+        <div class="bottom">
+            <b>@Health</b>
+            <b>@Starvation</b>
+            <b>@Sleepiness</b>
+        </div>
+    </div>
+
+
+</root>
+
+@code
+{
+    public string FPSCounter { get; set; }
+
+    public string Health { get; set; }
+    public string Starvation { get; set; }
+    public string Sleepiness { get; set; }
+
+	/// <summary>
+    /// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+    /// </summary>
+    protected override int BuildHash() => System.HashCode.Combine(FPSCounter, Health, Starvation, Sleepiness);
+}

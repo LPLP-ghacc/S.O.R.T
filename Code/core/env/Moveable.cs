@@ -1,7 +1,17 @@
 using Sandbox;
 
+public enum Weight
+{
+	Refrigerator,
+	Microwave,
+	OneLiterOfWater
+}
+
 public sealed class Moveable : Component, IMoveable
 {
+	[Property]
+	public Weight Weight { get; set; } = Weight.Microwave;
+
 	[RequireComponent]
 	private Rigidbody Body { get; set; }
 
@@ -16,37 +26,30 @@ public sealed class Moveable : Component, IMoveable
 
 	public void MoveTo( Vector3 to, float speed )
 	{
-		if ( Body != null )
-		{
-			Body.SmoothMove( to, speed, Time.Delta );
-		}
-		else
-		{
-			Log.Info( $"NO RIGIDBODY!!! {this.GameObject.Name}" );
-		}
+		Body.SmoothMove( to, speed / GetWeightMultiplierBy( Weight ), Time.Delta );
 	}
 
 	public void RotateTo( Rotation rotation, float speed )
 	{
-		if ( Body != null )
-		{
-			Body.SmoothRotate( rotation, speed, Time.Delta );
-		}
-		else
-		{
-			Log.Info( $"NO RIGIDBODY!!! {this.GameObject.Name}" );
-		}
+		Body.SmoothRotate( rotation, speed / GetWeightMultiplierBy( Weight ), Time.Delta );
 	}
 
 	public void Throw( Vector3 f )
 	{
-		if ( Body != null )
+		Body.ApplyImpulse( f );
+	}
+
+	private float GetWeightMultiplierBy( Weight weight )
+	{
+		switch ( weight )
 		{
-			Body.ApplyImpulse( f );
-		}
-		else
-		{
-			Log.Info( $"NO RIGIDBODY!!! {this.GameObject.Name}" );
+			case Weight.Microwave:
+				return 0.9f;
+			case Weight.OneLiterOfWater:
+				return 5f;
+			case Weight.Refrigerator:
+				return 0.3f;
+			default : return 1;
 		}
 	}
 }

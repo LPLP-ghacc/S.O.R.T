@@ -32,10 +32,10 @@ public sealed class RaycastInteractions : Component
 	public float ThrowForce { get; set; } = 100000;
 
 	[Property]
-	private float MaxMovingDistance { get; set; } = 105;
+	private float MaxMovingDistance { get; set; } = 60;
 
 	[Property]
-	private float MinMovingDistance { get; set; } = 60;
+	private float MinMovingDistance { get; set; } = 40;
 
 	[Property]
 	[ReadOnly]

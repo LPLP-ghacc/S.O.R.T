@@ -1,0 +1,48 @@
+IngameMenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: transparent;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	border-radius: 20px;
+
+	.ui {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	.header {
+		height: 10%;
+		font-size: 25px;
+		font-family: Poppins;
+	}
+
+	.body {
+		font-size: 25px;
+		height: 80%;
+		font-family: Poppins;
+	}
+
+	.bottom {
+		font-size: 25px;
+		height: 10%;
+		font-family: Poppins;
+	}
+
+	.title {
+		font-size: 25px;
+		font-family: Poppins;
+	}
+
+	b {
+		margin: 5px;
+		color: #fff;
+	}
+}
