@@ -1,0 +1,20 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Cobalt Metal Mat",
+      "Type": "material",
+      "Org": "progressprogram",
+      "Ident": "metal5",
+      "Schema": 0,
+      "IncludeSourceFiles": true,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "materials/metal/metal2/metal061c_1k-jpg.vmat"
+      }
+    }
+  }
+}

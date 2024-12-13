@@ -1,0 +1,66 @@
+{
+  "RootObject": {
+    "__guid": "ab732a90-e92f-4dac-be67-1dce17465277",
+    "Flags": 0,
+    "Name": "ceiling_light",
+    "Position": "1024,1600,107.1857",
+    "Rotation": "1,0,0,0.0000001947072",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "13793e82-070e-41fa-91f8-e4fb900367c5",
+        "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
+        "Model": "models/ceiling_light_tiles_01/ceiling_light_tile_01_64b.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "Off",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "6498c47f-c9fc-411f-854f-63de9a796ec1",
+        "IsTrigger": false,
+        "Model": "models/ceiling_light_tiles_01/ceiling_light_tile_01_64b.vmdl",
+        "Static": false,
+        "SurfaceVelocity": "0,0,0"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "1ffceb24-b2a0-456c-a476-555e9876fbaf",
+        "Flags": 0,
+        "Name": "Point Light",
+        "Position": "0,-0.000004110224,10.55489",
+        "Tags": "light_point,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "dce0f9d2-2a22-4f37-87de-31ecea299a23",
+            "Attenuation": 1.99,
+            "FogMode": "Enabled",
+            "FogStrength": 1,
+            "LightColor": "0.91373,0.98039,1,1",
+            "Radius": 400,
+            "Shadows": true
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "saandy.ceiling_light_tile_01_64b#38913"
+  ],
+  "__version": 1
+}

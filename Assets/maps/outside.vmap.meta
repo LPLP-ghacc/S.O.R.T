@@ -1,0 +1,37 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Outside",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "outside",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.concrete_cast_hs_01#28794",
+        "facepunch.concrete_cast_hs_02#37803",
+        "facepunch.concrete_trim_02#43472",
+        "facepunch.concrete_wall_bare_02#47059",
+        "facepunch.metal_trim_01#43480",
+        "facepunch.metal_trim_02#47037",
+        "facepunch.metal_trim_clean#43482",
+        "facepunch.metal_trim_painted_blend_01#43486",
+        "facepunch.metal_trim_painted_blend_02#44577",
+        "facepunch.wood_trim_burnt_blend_02#43514",
+        "fpopium.metal_trim_a#55223",
+        "fpopium.plastic_trim_a#55178",
+        "rust.pipeline_100x300_bend#25228",
+        "tfassets.ceiling_pipe_256_thick#21017",
+        "tridge.plaster_black#31730",
+        "tridge.tile_dark03#31733"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/outside.vmap"
+      }
+    }
+  }
+}

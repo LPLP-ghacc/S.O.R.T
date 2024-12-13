@@ -20,20 +20,24 @@
         "RenderTags": "",
         "TargetEye": "None",
         "Viewport": "0,0,1,1",
-        "ZFar": 10000,
+        "ZFar": 99091,
         "ZNear": 1
       },
       {
         "__type": "Sandbox.AmbientOcclusion",
         "__guid": "0ac7817c-3e65-41ec-a79f-0dd8c000a7d8",
-        "FalloffDistance": 1,
-        "Intensity": 15.7,
+        "__version": 1,
+        "DenoiseMode": "Temporal",
+        "FalloffRange": 0.75,
+        "Intensity": 0.15,
         "Quality": "High",
-        "Radius": 32
+        "Radius": 128,
+        "ThinCompensation": 0
       },
       {
         "__type": "Sandbox.Bloom",
         "__guid": "4699543d-4781-4485-86e8-74b9245988dd",
+        "__enabled": false,
         "BloomColor": {
           "blend": "Linear",
           "color": [
@@ -132,8 +136,7 @@
           },
           {
             "__type": "Sandbox.IngameMenu",
-            "__guid": "5d7434bc-5d32-4680-9f28-352989d90dab",
-            "MyStringValue": "Hello World!!!!"
+            "__guid": "5d7434bc-5d32-4680-9f28-352989d90dab"
           }
         ]
       }

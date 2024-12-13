@@ -8,7 +8,7 @@ public enum LifePain
 	Dying
 }
 
-public class LifeExperience : Component
+public sealed class LifeExperience : Component
 {
 	[Property, ReadOnly] public float Health { get; set; } = 100;
 	[Property, ReadOnly] public float Starvation { get; set; } = 100;

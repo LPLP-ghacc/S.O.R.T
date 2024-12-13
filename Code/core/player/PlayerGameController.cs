@@ -128,6 +128,10 @@ public sealed class PlayerGameController : Component
 	[Group( "Movement" )]
 	public float JumpCooldown { get; private set; } = 0.3f;
 
+	[Property]
+	[Group( "Movement" )]
+	public bool IsCanMove { get; set; } = true;
+
 	private float jumpTimer;
 	private PlayerInput inputController;
 
@@ -146,6 +150,9 @@ public sealed class PlayerGameController : Component
 	{
 		base.OnFixedUpdate();
 
+		if ( !IsCanMove )
+			return;
+
 		Jump();
 		PhysicsMovement();
 	}
@@ -153,6 +160,9 @@ public sealed class PlayerGameController : Component
 	protected override void OnUpdate()
 	{
 		base.OnUpdate();
+
+		if ( !IsCanMove )
+			return;
 
 		// Movement State Control
 		if ( !Input.UsingController )

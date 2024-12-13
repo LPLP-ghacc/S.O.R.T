@@ -8,10 +8,13 @@ public sealed class RaycastInteractions : Component
 	public bool EnableInteract { get; set; } = true;
 
 	[Property]
-	public string RayCastKey { get; set; } = "use";
+	public string MoveKey { get; set; } = "ObjectMove";
 
 	[Property]
-	public string MovingKey { get; set; } = "attack2";
+	public string InteractKey { get; set; } = "use";
+
+	[Property]
+	public string OnMovingKey { get; set; } = "attack2";
 
 	[Property]
 	public string ThrowKey { get; set; } = "attack1";
@@ -70,11 +73,9 @@ public sealed class RaycastInteractions : Component
 
 		CurrentGameObject = GetObj();
 
-		Interactable interactable = CurrentGameObject?.GetComponent<Interactable>();
 
-		interactable?.Interact();
 		
-		if ( Input.Down( MovingKey ) )
+		if ( Input.Down( OnMovingKey ) )
 		{
 			if ( MoveController != null )
 			{
@@ -103,7 +104,7 @@ public sealed class RaycastInteractions : Component
 			}
 		}
 		
-		if ( Input.Released( MovingKey ) )
+		if ( Input.Released( OnMovingKey ) )
 		{
 			MoveController = null;
 		
@@ -130,7 +131,7 @@ public sealed class RaycastInteractions : Component
 
 	private GameObject GetObj()
 	{
-		if ( Input.Down( RayCastKey ) )
+		if ( Input.Down( MoveKey ) )
 		{
 			var tr = Scene.Trace
 				.Ray( new Ray( TargetCamera.WorldPosition, TargetCamera.Transform.World.Forward ), MinMovingDistance )
@@ -148,6 +149,26 @@ public sealed class RaycastInteractions : Component
 				}
 
 				return tr.GameObject;
+			}
+		}
+
+		if ( Input.Down( InteractKey ) )
+		{
+			var tr = Scene.Trace
+				.Ray( new Ray( TargetCamera.WorldPosition, TargetCamera.Transform.World.Forward ), MinMovingDistance )
+				.Run();
+
+			if ( tr.Hit )
+			{
+				foreach ( var item in tr.GameObject.Components.GetAll() )
+				{
+					if ( item is IInteractable )
+					{
+						var interactable = (IInteractable)item;
+
+						interactable?.Interact(GetComponent<PlayerGameController>());
+					}
+				}
 			}
 		}
 

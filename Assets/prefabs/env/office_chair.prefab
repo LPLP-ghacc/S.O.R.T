@@ -1,0 +1,76 @@
+{
+  "RootObject": {
+    "__guid": "4250c18d-9971-4d0e-b852-757198e9eff1",
+    "Flags": 0,
+    "Name": "office_chair",
+    "Position": "500.4102,42.44618,0.0000002009457",
+    "Rotation": "0,0,1,0.0000001947072",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "51771a16-f768-42f3-8c3a-8b6881d44b02",
+        "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
+        "Model": "models/props/office_chair/office_chair.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "8b4bedb9-ad82-4055-8d65-19fea8285e7d",
+        "IsTrigger": false,
+        "Model": "models/props/office_chair/office_chair.vmdl",
+        "Static": false,
+        "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "734b8f87-5854-49d2-a788-787c3684b977",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {
+          "X": false,
+          "Y": false,
+          "Z": false,
+          "Pitch": false,
+          "Yaw": false,
+          "Roll": false
+        },
+        "MassCenterOverride": "0,0,0",
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "OverrideMassCenter": false,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "Moveable",
+        "__guid": "b8b39b3f-478b-478f-9c11-8a19c380849f",
+        "Weight": "Microwave"
+      },
+      {
+        "__type": "Chair",
+        "__guid": "3baa59b1-ccd1-47b7-8aaa-3b343d5e23b6",
+        "CameraOffset": "0,0,44.06",
+        "CameraPrefab": null
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "fish.office_chair#59009"
+  ],
+  "__version": 1
+}

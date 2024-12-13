@@ -1,0 +1,27 @@
+{
+  "clampu": false,
+  "clampv": false,
+  "clampw": false,
+  "nolod": false,
+  "nomip": false,
+  "nocompress": false,
+  "brightness": 1,
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Rock001",
+      "Type": "jpg",
+      "Org": "progressprogram",
+      "Ident": "rock001",
+      "Schema": 0,
+      "IncludeSourceFiles": true,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "materials/snow/rock007_1k-jpg/rock007_1k-jpg_displacement.jpg"
+      }
+    }
+  }
+}

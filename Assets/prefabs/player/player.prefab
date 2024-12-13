@@ -1,0 +1,132 @@
+{
+  "RootObject": {
+    "__guid": "19110262-9d84-49f9-9993-f4030a49ed65",
+    "Flags": 0,
+    "Name": "player",
+    "Tags": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "PlayerGameController",
+        "__guid": "b8e92fde-54f8-413c-b7b9-76ad7978506a",
+        "CameraOffset": "0,0,24",
+        "CreepSpeed": 0.05,
+        "CrouchSpeed": 0.5,
+        "CurrentMovementMultiplier": 0,
+        "EnableRotate": true,
+        "GroundBoxSize": "5,5,9",
+        "IsCanMove": true,
+        "IsGrounded": false,
+        "JumpCooldown": 0.3,
+        "JumpForceMultiplier": 35,
+        "MouseAcceleration": 25,
+        "MovementSpeed": 606.6,
+        "PlayerCamera": {
+          "_type": "gameobject",
+          "prefab": "prefabs/player/playercamera.prefab"
+        },
+        "RunSpeed": 5,
+        "UseMouseMoveSmoothing": true,
+        "UseSimpleMovement": false,
+        "ZFarDivider": 1
+      },
+      {
+        "__type": "RaycastInteractions",
+        "__guid": "eca26dfa-d54a-4af3-9e87-f619de144b29",
+        "CurrentMovingDistance": 0,
+        "EnableInteract": true,
+        "InteractKey": "use",
+        "MaxMovingDistance": 105,
+        "MinMovingDistance": 60,
+        "MouseMoveAcceleration": 5,
+        "MoveKey": "ObjectMove",
+        "OnMovingKey": "attack2",
+        "PropTag": "prop",
+        "ThrowForce": 100000,
+        "ThrowKey": "attack1",
+        "TimeToArrive": 0.5,
+        "WithoutTags": []
+      },
+      {
+        "__type": "PlayerInput",
+        "__guid": "bbb9ada5-ebbc-4bc0-9191-6e3d4d15ea70",
+        "InputVector": "0,0,0",
+        "isUsingLerp": true,
+        "KeyFactor": 0.4
+      },
+      {
+        "__type": "Sandbox.CapsuleCollider",
+        "__guid": "5d621c59-9ccc-4753-b93d-73dca78ca3d8",
+        "End": "0,0,20.39998",
+        "IsTrigger": false,
+        "Radius": 16,
+        "Start": "0,0,-20.4",
+        "Static": false,
+        "Surface": "surfaces/player.surface",
+        "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "11337d25-bac5-4a26-8643-5601f926bb60",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {
+          "X": false,
+          "Y": false,
+          "Z": false,
+          "Pitch": true,
+          "Yaw": true,
+          "Roll": true
+        },
+        "MassCenterOverride": "0,0,0",
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "OverrideMassCenter": false,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "LifeExperience",
+        "__guid": "c5a46655-203d-46d3-b429-97253896c1f7",
+        "Fear": 100,
+        "Happiness": 100,
+        "Health": 100,
+        "Sleepiness": 100,
+        "Starvation": 100
+      }
+    ],
+    "Children": [],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

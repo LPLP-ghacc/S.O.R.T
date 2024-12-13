@@ -21,22 +21,22 @@ public sealed class DoorOpener : Component, IInteractable
 	[Property]
 	public float OpeningSpeed { get; set; } = 5f;
 
-	private float StartRotation { get; set; }
+	private Rotation StartRotation { get; set; }
 
 	protected override void OnStart()
 	{
 		Sound = GetComponent<SoundPointComponent>();
 
-		StartRotation = LocalRotation.y;
+		StartRotation = LocalRotation;
 	}
 
 	protected override void OnUpdate()
 	{
 		if ( _state == DoorState.Opening )
 		{
-			LocalRotation = Rotation.Slerp( LocalRotation, Rotation.FromYaw( StartRotation + 90 ), OpeningSpeed * Time.Delta );
+			LocalRotation = Rotation.Slerp( LocalRotation, Rotation.FromYaw( StartRotation.Yaw() + 90 ), OpeningSpeed * Time.Delta );
 		
-			if ( IsApproximateFor( LocalRotation.Yaw(), StartRotation + 90, 0.5f ) )
+			if ( IsApproximateFor( LocalRotation.Yaw(), StartRotation.Yaw() + 90, 0.5f ) )
 			{
 				_state = DoorState.Opened;
 			}
@@ -44,9 +44,9 @@ public sealed class DoorOpener : Component, IInteractable
 		
 		if ( _state == DoorState.Closing )
 		{
-			LocalRotation = Rotation.Slerp( LocalRotation, Rotation.FromYaw( StartRotation ), OpeningSpeed * Time.Delta );
+			LocalRotation = Rotation.Slerp( LocalRotation, Rotation.FromYaw( StartRotation.Yaw() ), OpeningSpeed * Time.Delta );
 		
-			if ( IsApproximateFor( LocalRotation.Yaw(), StartRotation, 0.5f ) )
+			if ( IsApproximateFor( LocalRotation.Yaw(), StartRotation.Yaw(), 0.5f ) )
 			{
 				_state = DoorState.Closed;
 			}
@@ -58,7 +58,7 @@ public sealed class DoorOpener : Component, IInteractable
 		return value > comparedValue - approximateValue && value < comparedValue + approximateValue + approximateValue;
 	}
 
-	public void Interact()
+	public void Interact(PlayerGameController player)
 	{
 		if ( _state == DoorState.Closed )
 		{

@@ -1,0 +1,1070 @@
+{
+  "__guid": "87800999-bb15-42fd-b84e-a8f4dfa8dc64",
+  "GameObjects": [
+    {
+      "__guid": "f7bb2f22-bf48-4c39-a055-628a4e2a8f55",
+      "Flags": 0,
+      "Name": "Map",
+      "Position": "-49.75754,-62.39056,94.14734",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "ce8b447b-5661-46fc-b69a-c4e6745d2c40",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/outside.vmap",
+          "NoOrigin": false,
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "7b628bfe-75c7-4538-917f-0ed512b73cca",
+      "Flags": 0,
+      "Name": "Player",
+      "Position": "-123.3193,-1751.473,201.1692",
+      "Enabled": true,
+      "__Prefab": "prefabs/player/player.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d284b0c4-f32b-4dcc-ad0a-dc10880bb644",
+      "Flags": 0,
+      "Name": "metal_lamp",
+      "Position": "641.1399,-663.4677,158.1709",
+      "Rotation": "0,0,0.9659259,-0.2588189",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "abf48457-62d9-43f6-bffe-47f7e5058f5e",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "models/items/metal_set/metal_lamp.vmdl",
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "f3b2af7f-ddb3-4fbe-98b6-84105c37b6da",
+      "Flags": 0,
+      "Name": "industrial_wall_lamp",
+      "Position": "-81.1179,129.6094,217.4918",
+      "Rotation": "0.5,0.5,-0.5,0.5",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "083392d5-5355-4abb-973c-43648618472d",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "MaterialGroup": "on",
+          "Model": "models/rust_props/light_fixtures/industrial_wall_lamp.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "Off",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "27a92b5c-dfb6-4fdc-b916-39863d449bb9",
+          "Flags": 0,
+          "Name": "Point Light",
+          "Position": "-0.00001525879,0.000007629395,10.40753",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "82343861-8963-4442-95de-0ae338cce4be",
+              "Attenuation": 1.86,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.90698,0.78991,0.43872,1",
+              "Radius": 209.49991,
+              "Shadows": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "1069c803-779e-4dae-9216-c06d0aa4d9c9",
+      "Flags": 0,
+      "Name": "ceiling_light",
+      "Position": "-80.74585,224.729,201.2193",
+      "Rotation": "1,0,0,0.0000001947072",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "298e79ce-1417-4d91-969c-2d90a85d5132",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "Model": "models/ceiling_light_tiles_01/ceiling_light_tile_01_64b.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "Off",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "fa035cbd-c64d-4684-a283-91c768bd4b06",
+          "IsTrigger": false,
+          "Model": "models/ceiling_light_tiles_01/ceiling_light_tile_01_64b.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "f95d054f-07f3-482a-b319-a8aca7627304",
+          "Flags": 0,
+          "Name": "Point Light",
+          "Position": "0,-0.000004110224,10.55489",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "5671cbe8-0dec-4be3-a22e-f9c16a428ef0",
+              "Attenuation": 1.99,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.15167,0.18159,0.1907,1",
+              "Radius": 400,
+              "Shadows": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "ea3fe485-2648-487c-a8f3-996d83d98a2f",
+      "Flags": 0,
+      "Name": "Terrain",
+      "Position": "-50000,-50000,0",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Terrain",
+          "__guid": "3ae33168-f344-4348-9394-8af8616649ce",
+          "__version": 1,
+          "ClipMapLodExtentTexels": 256,
+          "ClipMapLodLevels": 6,
+          "EnableCollision": true,
+          "IsTrigger": false,
+          "RenderType": "Off",
+          "Static": true,
+          "Storage": "models/terrains/outside.terrain",
+          "SurfaceVelocity": "0,0,0",
+          "TerrainHeight": 10000,
+          "TerrainSize": 79807.5
+        }
+      ]
+    },
+    {
+      "__guid": "c3860302-c0ae-43a6-aad0-4a48467d349a",
+      "Flags": 0,
+      "Name": "Light",
+      "Position": "511.0056,-1492.305,456.1083",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "17f204ea-ae5d-4e73-8845-5c1dfd9ec77c",
+          "Flags": 0,
+          "Name": "Envmap Probe",
+          "Position": "-305.8669,635.1088,89.77423",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "b06e0fbc-34aa-4777-873b-98e515101e8c",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-538.8991,-1057.298,-570.7988",
+                "Maxs": "626.8998,1023.3,335.6018"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 32,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": true,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "54ce8824-8c54-4121-a322-f0a27837aa49",
+          "Flags": 0,
+          "Name": "Envmap Probe (2)",
+          "Position": "-305.8669,-3028.659,1194.122",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "d97ba39a-ac51-4ae5-b03f-bc60f0a92ba2",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-5455.393,-5000,-5000",
+                "Maxs": "5000,5000,5000"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 32,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": true,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "5b33a614-d435-4e47-9b53-81dfc31ef378",
+          "Flags": 0,
+          "Name": "Envmap Probe (7)",
+          "Position": "9929.962,-3028.659,1194.122",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "d0a671ca-597a-4720-bdb5-70a5836c1875",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-5455.393,-5000,-5000",
+                "Maxs": "5000,5000,5000"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 32,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": true,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "b499f857-801a-4c6b-9826-c76c9bf33b06",
+          "Flags": 0,
+          "Name": "Envmap Probe (4)",
+          "Position": "-305.8669,-12781.45,1194.122",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "c157c14e-cfa6-4983-837e-a58817bf726f",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-5455.393,-5000,-5000",
+                "Maxs": "5000,5000,5000"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 32,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": true,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "b9ee2abc-2b40-48d6-8e54-fd1d33e30a88",
+          "Flags": 0,
+          "Name": "Envmap Probe (10)",
+          "Position": "-305.8669,-22448.84,1194.122",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "f71b3f53-b232-48b0-953b-2172c57cd3ff",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-5455.393,-5000,-5000",
+                "Maxs": "5000,5000,5000"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 32,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": true,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "ef6b43fb-515a-4f98-8a02-3ef8df0da6b2",
+          "Flags": 0,
+          "Name": "Envmap Probe (6)",
+          "Position": "9929.962,-12781.45,1194.122",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "8d1cb894-966d-4cb2-b16e-5b57170120d9",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-5455.393,-5000,-5000",
+                "Maxs": "5000,5000,5000"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 32,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": true,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "fef6d028-2014-44b6-a563-888a589fb919",
+          "Flags": 0,
+          "Name": "Envmap Probe (8)",
+          "Position": "9929.962,-22448.84,1194.122",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "11f1cf3c-d6a9-405f-b4c4-2c76cf9bae59",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-5455.393,-5000,-5000",
+                "Maxs": "5000,5000,5000"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 32,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": true,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "da035ce6-7eab-4031-be1d-1b6603a08262",
+          "Flags": 0,
+          "Name": "Envmap Probe (3)",
+          "Position": "-10662.72,-3028.659,1194.122",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "53983a40-e8be-4277-95f1-9fe3f8561c8a",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-5455.393,-5000,-5000",
+                "Maxs": "5000,5000,5000"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 32,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": true,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "b6829514-4c2e-4024-9140-843574a9f8e2",
+          "Flags": 0,
+          "Name": "Envmap Probe (5)",
+          "Position": "-10662.72,-12781.45,1194.122",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "6d9694f2-4edf-41a8-a56d-2b79b462c030",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-5455.393,-5000,-5000",
+                "Maxs": "5000,5000,5000"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 32,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": true,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "932f0d55-1047-4916-8801-db42103eb5d7",
+          "Flags": 0,
+          "Name": "Envmap Probe (9)",
+          "Position": "-10662.72,-22448.84,1194.122",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "894591df-05b1-4604-a0e4-34a7308fb158",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-5455.393,-5000,-5000",
+                "Maxs": "5000,5000,5000"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 32,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": true,
+              "Projection": "Box",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "f4b7ac2a-66f2-4d9a-b8fa-3b2d9ada690d",
+          "Flags": 0,
+          "Name": "Envmap Probe (1)",
+          "Position": "-589.801,1711.443,-300.7876",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.EnvmapProbe",
+              "__guid": "815668c0-bd6d-4453-a0a7-b2f8fd5383c9",
+              "Texture": "textures/cubemaps/default2.vtex",
+              "Bounds": {
+                "Mins": "-160.3,-76.90002,-122.8999",
+                "Maxs": "114.7,127.1,109.9999"
+              },
+              "DelayBetweenUpdates": 0.1,
+              "Feathering": 0.02,
+              "FrameInterval": 5,
+              "MaxDistance": 512,
+              "MultiBounce": false,
+              "Projection": "Sphere",
+              "RenderDynamically": true,
+              "TintColor": "1,1,1,1",
+              "UpdateStrategy": "OnEnabled",
+              "ZFar": 4096,
+              "ZNear": 16
+            }
+          ]
+        },
+        {
+          "__guid": "18295f0d-6404-4619-874a-6f62ff19a459",
+          "Flags": 0,
+          "Name": "2D Skybox",
+          "Position": "-367.7743,1193.009,-160.8043",
+          "Tags": "skybox",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkyBox2D",
+              "__guid": "adac9e7a-0ba5-48b9-8e53-64f029cc74a3",
+              "SkyIndirectLighting": true,
+              "SkyMaterial": "materials/skybox/skybox_sunrise_01.vmat",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "fcd1bf7c-d155-4c24-84f4-c97aa4de64f6",
+          "Flags": 0,
+          "Name": "Sun",
+          "Position": "536.0688,-2354.841,680.0635",
+          "Rotation": "0.06217727,0.240547,-0.2862663,0.9253774",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "a5a3d8bc-75c2-402a-bbbe-b46041a93959",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "1,0.97101,0.89767,1",
+              "Shadows": true,
+              "SkyColor": "0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "7d1a6a6a-f3bd-4a27-9c19-41cc07ac04d0",
+      "Flags": 0,
+      "Name": "Effects",
+      "Position": "256.734,-1612.018,284.1159",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "95165438-093f-45b6-8a55-c3a297fc4ee7",
+          "Flags": 0,
+          "Name": "Gradient Fog",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.GradientFog",
+              "__guid": "9bd23b6b-ead8-4fb7-8bbe-9ed62d726c63",
+              "Color": "1,1,1,0.05",
+              "EndDistance": 2538.5984,
+              "FalloffExponent": 0.8000009,
+              "Height": 1619.3975,
+              "StartDistance": 370.30066,
+              "VerticalFalloffExponent": 2.399925
+            }
+          ]
+        },
+        {
+          "__guid": "aafbb401-8b5a-4542-a5ec-74695a8cc9c1",
+          "Flags": 0,
+          "Name": "Spray",
+          "Position": "-0.0001220703,-3293.631,129.0108",
+          "Tags": "particles",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ParticleEffect",
+              "__guid": "c20dbdd2-1ae0-4e6b-8b4b-413254bbc104",
+              "__version": 1,
+              "Alpha": {
+                "Type": "Curve",
+                "Evaluation": "Life",
+                "CurveA": [
+                  {
+                    "x": 0,
+                    "y": 1,
+                    "in": 0,
+                    "out": 0,
+                    "mode": "Mirrored"
+                  },
+                  {
+                    "x": 0.48029557,
+                    "y": 1,
+                    "in": 1.5365853,
+                    "out": -1.5365853,
+                    "mode": "Mirrored"
+                  },
+                  {
+                    "x": 1,
+                    "y": 0,
+                    "in": 1.312303,
+                    "out": -1.312303,
+                    "mode": "Mirrored"
+                  }
+                ],
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "1,0,0,0"
+              },
+              "ApplyAlpha": true,
+              "ApplyColor": true,
+              "ApplyRotation": false,
+              "ApplyShape": true,
+              "Bounce": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "1,0,0,0"
+              },
+              "Brightness": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "1,0,0,0"
+              },
+              "Bumpiness": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "0,0,0,0"
+              },
+              "Collision": false,
+              "CollisionRadius": 1,
+              "Damping": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "0.1,0,0,0"
+              },
+              "DieOnCollisionChance": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "0,0,0,0"
+              },
+              "Force": false,
+              "ForceDirection": "0,0,-200",
+              "ForceScale": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "1,0,0,0"
+              },
+              "Friction": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "1,0,0,0"
+              },
+              "Gradient": {
+                "Type": "Range",
+                "Evaluation": "Particle",
+                "GradientA": {
+                  "blend": "Linear",
+                  "color": [
+                    {
+                      "t": 0.5,
+                      "c": "1,1,1,1"
+                    }
+                  ],
+                  "alpha": []
+                },
+                "GradientB": {
+                  "blend": "Linear",
+                  "color": [
+                    {
+                      "t": 0.5,
+                      "c": "1,1,1,1"
+                    }
+                  ],
+                  "alpha": []
+                },
+                "ConstantA": "1,1,1,1",
+                "ConstantB": "1,1,1,1"
+              },
+              "Lifetime": {
+                "Type": "Range",
+                "Evaluation": "Particle",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "100,2000,0,0"
+              },
+              "MaxParticles": 5000,
+              "OrbitalForce": {
+                "X": {
+                  "Type": "Constant",
+                  "Evaluation": "Life",
+                  "CurveA": {
+                    "rangex": "0,0",
+                    "rangey": "0,0"
+                  },
+                  "CurveB": {
+                    "rangex": "0,0",
+                    "rangey": "0,0"
+                  },
+                  "Constants": "0,0,0,0"
+                },
+                "Y": {
+                  "Type": "Constant",
+                  "Evaluation": "Life",
+                  "CurveA": {
+                    "rangex": "0,0",
+                    "rangey": "0,0"
+                  },
+                  "CurveB": {
+                    "rangex": "0,0",
+                    "rangey": "0,0"
+                  },
+                  "Constants": "0,0,0,0"
+                },
+                "Z": {
+                  "Type": "Constant",
+                  "Evaluation": "Life",
+                  "CurveA": {
+                    "rangex": "0,0",
+                    "rangey": "0,0"
+                  },
+                  "CurveB": {
+                    "rangex": "0,0",
+                    "rangey": "0,0"
+                  },
+                  "Constants": "0,0,0,0"
+                }
+              },
+              "OrbitalPull": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "0,0,0,0"
+              },
+              "PerParticleTimeScale": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "1,0.4,0,0"
+              },
+              "Pitch": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "0,0,0,0"
+              },
+              "PreWarm": 0,
+              "PushStrength": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "0,0,0,0"
+              },
+              "Roll": {
+                "Type": "Range",
+                "Evaluation": "Particle",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "0,360,0,0"
+              },
+              "Scale": {
+                "Type": "Curve",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangey": "0,3",
+                  "frames": [
+                    {
+                      "x": 0,
+                      "y": 0,
+                      "in": -9.333329,
+                      "out": 9.333329,
+                      "mode": "Mirrored"
+                    },
+                    {
+                      "x": 0.03325123,
+                      "y": 1,
+                      "in": -0.056075174,
+                      "out": 0.056075174,
+                      "mode": "Mirrored"
+                    },
+                    {
+                      "x": 1,
+                      "y": 0,
+                      "in": 2.9152544,
+                      "out": -2.9152544,
+                      "mode": "Mirrored"
+                    }
+                  ]
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "1,0,0,0"
+              },
+              "SequenceId": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "0,0,0,0"
+              },
+              "SequenceSpeed": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "1,0,0,0"
+              },
+              "SequenceTime": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "1,0,0,0"
+              },
+              "SheetSequence": false,
+              "Space": "World",
+              "StartDelay": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "0,0,0,0"
+              },
+              "StartVelocity": {
+                "Type": "Range",
+                "Evaluation": "Particle",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "10,100,0,0"
+              },
+              "Stretch": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "0,0,0,0"
+              },
+              "TimeScale": 1,
+              "Tint": "1,1,1,1",
+              "Yaw": {
+                "Type": "Constant",
+                "Evaluation": "Life",
+                "CurveA": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "CurveB": {
+                  "rangex": "0,0",
+                  "rangey": "0,0"
+                },
+                "Constants": "0,0,0,0"
+              }
+            },
+            {
+              "__type": "Sandbox.ParticleSpriteRenderer",
+              "__guid": "69ba2f50-b1c8-4eab-b992-987a7d1562ef",
+              "Additive": false,
+              "Alignment": "LookAtCamera",
+              "BlurAmount": 0.5,
+              "BlurOpacity": 0.91,
+              "BlurSpacing": 0.73,
+              "DepthFeather": 22.98,
+              "FaceVelocity": true,
+              "FogStrength": 0.26,
+              "LeadingTrail": true,
+              "Lighting": false,
+              "MotionBlur": false,
+              "Opaque": false,
+              "Pivot": "0.5,0.5",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": true,
+                "AfterUILayer": false
+              },
+              "RotationOffset": 5.68,
+              "Scale": 1,
+              "Shadows": false,
+              "SortMode": "Unsorted",
+              "Texture": "materials/particles/shapes/star3.vtex"
+            },
+            {
+              "__type": "Sandbox.ParticleBoxEmitter",
+              "__guid": "5d1ad90a-26af-4029-9c93-d5860da93771",
+              "Burst": 0,
+              "Delay": 0,
+              "DestroyOnEnd": false,
+              "Duration": 50,
+              "Loop": true,
+              "OnEdge": false,
+              "Rate": 503.51,
+              "RateOverDistance": 201.75,
+              "Size": "5000,5000,500"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "Metadata": {},
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "ResourceVersion": 2,
+  "Title": null,
+  "Description": null,
+  "__references": [
+    "luke.metal_lamp#22921",
+    "rust.industrial_wall_lamp#25225",
+    "saandy.ceiling_light_tile_01_64b#38913"
+  ],
+  "__version": 2
+}

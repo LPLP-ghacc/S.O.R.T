@@ -36,10 +36,10 @@
 							exclude_by_default = true
 							exception_list = 
 							[
-								"mesh_2",
-								"mesh_8",
-								"mesh_11",
 								"Y_AXIS",
+								"mesh_11",
+								"mesh_8",
+								"mesh_2",
 							]
 						}
 					},

@@ -48,7 +48,7 @@ public sealed class SwitchController : Component, IInteractable
 		}
 	}
 
-	public void Interact()
+	public void Interact(PlayerGameController player)
 	{
 		if ( !enableInteraction )
 			return;

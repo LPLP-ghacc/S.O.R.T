@@ -4,8 +4,8 @@ Layer0
 {
 	shader "shaders/complex.shader"
 
-	//---- Rendering ----
-	F_PARALLAX_OCCLUSION 1
+	//---- PBR ----
+	F_SPECULAR 1
 
 	//---- Ambient Occlusion ----
 	g_flAmbientOcclusionDirectDiffuse "0.623"
@@ -29,15 +29,8 @@ Layer0
 	//---- Normal ----
 	TextureNormal "materials/conctere1/Concrete031_1K-JPG_NormalDX.jpg"
 
-	//---- Parallax ----
-	g_flHeightMapScale "0.020"
-	g_nLODThreshold "4"
-	g_nMaxSamples "32"
-	g_nMinSamples "8"
-	TextureHeight "materials/default/default_height.tga"
-
 	//---- Roughness ----
-	g_flRoughnessScaleFactor "1.000"
+	g_flRoughnessScaleFactor "1.847"
 	TextureRoughness "materials/conctere1/Concrete031_1K-JPG_Roughness.jpg"
 
 	//---- Texture Coordinates ----
