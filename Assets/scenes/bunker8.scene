@@ -43,8 +43,6 @@
           "EnableCollision": true,
           "MapName": "map/bunker_08.vmap",
           "NoOrigin": false,
-          "OnMapLoaded": null,
-          "OnMapUnloaded": null,
           "UseMapFromLaunch": false
         }
       ],
@@ -1499,7 +1497,7 @@
               "__guid": "9fa412ca-43e4-4f89-906f-0938585627dd",
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
-              "MaterialGroup": "b",
+              "MaterialGroup": "default",
               "Model": "models/ceiling_light_tiles_01/ceiling_light_tile_01_64b.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -1555,6 +1553,7 @@
               "__guid": "512b5a4d-482f-4a61-8e06-f10c32d12127",
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
+              "MaterialGroup": "default",
               "Model": "models/ceiling_light_tiles_01/ceiling_light_tile_01_64b.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -2658,19 +2657,25 @@
         {
           "__type": "SwitchController",
           "__guid": "deea8ee3-499b-4a05-aa6e-106334f5e9ae",
-          "Model": {
-            "_type": "component",
-            "component_id": "5dbcba22-6523-4fe5-a987-fd1624d52a71",
-            "go": "09dc836b-6133-4c2f-976e-c21414d87460",
-            "component_type": "ModelRenderer"
-          },
+          "MaterialGroupStingOff": "off",
+          "MaterialGroupStingOn": "default",
+          "Model": [
+            {
+              "_type": "component",
+              "component_id": "5dbcba22-6523-4fe5-a987-fd1624d52a71",
+              "go": "09dc836b-6133-4c2f-976e-c21414d87460",
+              "component_type": "ModelRenderer"
+            }
+          ],
           "SoundEvent": "sounds/switch/switch.sound",
-          "ToggleLight": {
-            "_type": "component",
-            "component_id": "60f44f56-1d9d-4455-b916-7aee9386e2ef",
-            "go": "029db441-d302-4c29-bb90-47286b452b65",
-            "component_type": "PointLight"
-          }
+          "ToggleLight": [
+            {
+              "_type": "component",
+              "component_id": "60f44f56-1d9d-4455-b916-7aee9386e2ef",
+              "go": "029db441-d302-4c29-bb90-47286b452b65",
+              "component_type": "PointLight"
+            }
+          ]
         },
         {
           "__type": "Interactable",
@@ -2679,6 +2684,435 @@
         {
           "__type": "Sandbox.SoundPointComponent",
           "__guid": "cd29786b-c747-4914-b438-68aa43b2a818",
+          "Distance": 512,
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Falloff": [
+            {
+              "x": 0,
+              "y": 1,
+              "in": 3.1415927,
+              "out": -3.1415927,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundOverride": false,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "unknown",
+            "Id": "00000000-0000-0000-0000-000000000000"
+          },
+          "Volume": 1
+        }
+      ]
+    },
+    {
+      "__guid": "cb72df34-3c24-42e0-8d8f-7fc038e39aae",
+      "Flags": 0,
+      "Name": "outlet_switch_player_room (1)",
+      "Position": "579.746,672.5077,40.85628",
+      "Rotation": "-0.00000004214684,0.00000004214685,0.7071068,-0.7071066",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "0840e978-d246-4c8e-9c24-ba6f43eb191b",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "Model": "wall sockets/outlet_switch.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "10dfde5a-f885-4c74-9cdf-934d5435e58e",
+          "IsTrigger": false,
+          "Model": "wall sockets/outlet_switch.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "SwitchController",
+          "__guid": "b45040d9-f641-427e-81b7-c9f20a6083a9",
+          "MaterialGroupStingOff": "off",
+          "MaterialGroupStingOn": "default",
+          "Model": [
+            {
+              "_type": "component",
+              "component_id": "9fa412ca-43e4-4f89-906f-0938585627dd",
+              "go": "6e6502e1-8103-4c3f-984a-c1b5291cf0c2",
+              "component_type": "ModelRenderer"
+            },
+            {
+              "_type": "component",
+              "component_id": "512b5a4d-482f-4a61-8e06-f10c32d12127",
+              "go": "a1f32c2a-eaa4-4d4c-906b-d25e5e79e435",
+              "component_type": "ModelRenderer"
+            },
+            {
+              "_type": "component",
+              "component_id": "b4863b94-e448-469a-bed4-9bf54175cd82",
+              "go": "399c28ce-d920-480b-8c3d-799f8664c7ad",
+              "component_type": "ModelRenderer"
+            },
+            {
+              "_type": "component",
+              "component_id": "0da23157-cd84-4f80-a427-214c417f4851",
+              "go": "930fb590-689e-4cbc-9b96-be19a23f90ea",
+              "component_type": "ModelRenderer"
+            },
+            {
+              "_type": "component",
+              "component_id": "a526940f-fcf1-42c0-b9de-7d8016f74c21",
+              "go": "33572f23-6504-47c6-aae5-05c22aaa62a5",
+              "component_type": "ModelRenderer"
+            },
+            {
+              "_type": "component",
+              "component_id": "2b65ef39-8ce7-415a-907d-aafd09002c5a",
+              "go": "c0fda75c-6f4b-4b6a-a294-f5000585fab6",
+              "component_type": "ModelRenderer"
+            }
+          ],
+          "Probe": {
+            "_type": "component",
+            "component_id": "33563f59-9aba-4a58-940c-bb8f3aaf1305",
+            "go": "3e029713-1a6a-461e-bec5-460bbb9b6a37",
+            "component_type": "EnvmapProbe"
+          },
+          "SoundEvent": "sounds/switch/switch.sound",
+          "ToggleLight": [
+            {
+              "_type": "component",
+              "component_id": "4915d683-e9db-46a7-aef7-4ca911830433",
+              "go": "91cc9659-7d1d-4953-bb07-398b0a8f78ac",
+              "component_type": "PointLight"
+            },
+            {
+              "_type": "component",
+              "component_id": "a7e1223e-083d-4a09-ab65-b6422dd3d463",
+              "go": "6161ae6d-69e3-4e29-b0fa-a96572d3df1c",
+              "component_type": "PointLight"
+            },
+            {
+              "_type": "component",
+              "component_id": "de3b0b3d-2815-492f-b136-34b33bbdfcac",
+              "go": "c266474b-a37a-41f5-b4c7-a4c79d4246f2",
+              "component_type": "PointLight"
+            },
+            {
+              "_type": "component",
+              "component_id": "a81e83fe-51e2-4283-89c4-ddcd54efe632",
+              "go": "2e70d3e1-a8ec-42fa-8991-a5a2f1eea6be",
+              "component_type": "PointLight"
+            },
+            {
+              "_type": "component",
+              "component_id": "47234f6e-f675-4c42-a2f4-f4913828b5b5",
+              "go": "5ef417da-1e3d-4181-a467-d6d82fba89ec",
+              "component_type": "PointLight"
+            },
+            {
+              "_type": "component",
+              "component_id": "55b516ec-e3b8-447a-b7cf-98b08f8e283a",
+              "go": "9dbb5ffa-85d2-46f6-ba63-092308e68897",
+              "component_type": "PointLight"
+            }
+          ]
+        },
+        {
+          "__type": "Interactable",
+          "__guid": "f7187731-0014-4a90-8b10-c0fe5f9896fd"
+        },
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "187497d9-f2a9-40de-a897-8022fcf288dd",
+          "Distance": 512,
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Falloff": [
+            {
+              "x": 0,
+              "y": 1,
+              "in": 3.1415927,
+              "out": -3.1415927,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundOverride": false,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "unknown",
+            "Id": "00000000-0000-0000-0000-000000000000"
+          },
+          "Volume": 1
+        }
+      ]
+    },
+    {
+      "__guid": "04a9f8c5-9a43-4551-b601-d6949f601ab9",
+      "Flags": 0,
+      "Name": "outlet_switch_player_room (2)",
+      "Position": "745.933,160.1399,40.85633",
+      "Rotation": "-0.00000004214684,0.00000004214685,0.7071068,-0.7071066",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "e15cd300-a521-43cc-8617-0b87864edf99",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "Model": "wall sockets/outlet_switch.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "acb1903d-1cde-4b5e-aefc-9890ef917d5c",
+          "IsTrigger": false,
+          "Model": "wall sockets/outlet_switch.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "SwitchController",
+          "__guid": "c7f087c6-0bc3-4f1e-98ad-8b53729ec9f2",
+          "MaterialGroupStingOff": "off",
+          "MaterialGroupStingOn": "default",
+          "Model": [
+            {
+              "_type": "component",
+              "component_id": "4091c4b7-024c-404c-b90a-dc05197f392f",
+              "go": "94e070d8-8f81-4e3a-86ac-bbb1a8c010b5",
+              "component_type": "ModelRenderer"
+            },
+            {
+              "_type": "component",
+              "component_id": "0fb1ef2d-8610-4b40-a763-6fed8d534a55",
+              "go": "b6658362-a55f-470e-ba4f-343a31595c6a",
+              "component_type": "ModelRenderer"
+            },
+            {
+              "_type": "component",
+              "component_id": "0e158ff8-f080-41a5-990b-92891c9dad2e",
+              "go": "30e6f829-bbb4-4a22-abd9-b3c31ed13ae9",
+              "component_type": "ModelRenderer"
+            }
+          ],
+          "Probe": {
+            "_type": "component",
+            "component_id": "d225e1b5-1564-493a-9bca-f798bce43905",
+            "go": "693a7418-a42d-4ca0-8542-54cfeddfcafe",
+            "component_type": "EnvmapProbe"
+          },
+          "SoundEvent": "sounds/switch/switch.sound",
+          "ToggleLight": [
+            {
+              "_type": "component",
+              "component_id": "4276b62a-b697-4b4a-8b8c-e1112aadf54f",
+              "go": "06fce294-e38d-4ae9-a93d-fd0f11df2a64",
+              "component_type": "PointLight"
+            },
+            {
+              "_type": "component",
+              "component_id": "940292f8-23db-41aa-93d0-112ccde848b7",
+              "go": "3fffcd44-90e7-4374-a0fc-6df911eb272c",
+              "component_type": "PointLight"
+            },
+            {
+              "_type": "component",
+              "component_id": "dd3361da-7456-48cb-94f5-f1a650aba476",
+              "go": "f2d1d162-51e0-44c1-8354-5bb753ca26d9",
+              "component_type": "PointLight"
+            }
+          ]
+        },
+        {
+          "__type": "Interactable",
+          "__guid": "3eed3548-b6ae-43ba-ab97-0d889499d408"
+        },
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "006c053c-f260-44b1-967b-b7de4fdab75b",
+          "Distance": 512,
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Falloff": [
+            {
+              "x": 0,
+              "y": 1,
+              "in": 3.1415927,
+              "out": -3.1415927,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundOverride": false,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "unknown",
+            "Id": "00000000-0000-0000-0000-000000000000"
+          },
+          "Volume": 1
+        }
+      ]
+    },
+    {
+      "__guid": "9d62c1c6-d88d-4e48-a2c4-d82b3d304711",
+      "Flags": 0,
+      "Name": "outlet_switch_player_room (3)",
+      "Position": "831.4097,185.425,40.85633",
+      "Rotation": "-0.00000000000001065814,0.00000005960464,0.0000002682209,-0.9999999",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "a8c32bc5-2fb2-4747-b0c3-7428a07af2f2",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "Model": "wall sockets/outlet_switch.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "353590a7-a3e2-4353-b21e-89bccc2c1fce",
+          "IsTrigger": false,
+          "Model": "wall sockets/outlet_switch.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "SwitchController",
+          "__guid": "6b9d4a59-6e81-44e6-b107-795fc95769b7",
+          "MaterialGroupStingOff": "off",
+          "MaterialGroupStingOn": "default",
+          "Model": [
+            {
+              "_type": "component",
+              "component_id": "0a9cc8b9-0106-43e6-b8d7-343dd7214d35",
+              "go": "bb2e02e4-ccce-42f0-b327-7fa18cb26474",
+              "component_type": "ModelRenderer"
+            },
+            {
+              "_type": "component",
+              "component_id": "1cc44ee9-23dc-48c9-9838-b103b6109326",
+              "go": "d00fcac4-e910-4652-a547-bc0c58b39280",
+              "component_type": "ModelRenderer"
+            },
+            {
+              "_type": "component",
+              "component_id": "77ea1993-62d7-4f62-b686-10b481e5078b",
+              "go": "45fecbf7-bb6f-4a87-9021-a5475567dd9c",
+              "component_type": "ModelRenderer"
+            }
+          ],
+          "Probe": {
+            "_type": "component",
+            "component_id": "05688a02-6e14-4325-a098-20e59d1ff9dd",
+            "go": "23052c8f-91c6-4a9e-97f8-3fa5e12a2e80",
+            "component_type": "EnvmapProbe"
+          },
+          "SoundEvent": "sounds/switch/switch.sound",
+          "ToggleLight": [
+            {
+              "_type": "component",
+              "component_id": "ab5807d2-b499-43c9-8d46-0e4bb3c94293",
+              "go": "f58e1191-3a79-4fc9-b90b-2785ec716a3a",
+              "component_type": "PointLight"
+            },
+            {
+              "_type": "component",
+              "component_id": "fbd459f7-f7fb-4aec-a8ea-b51e1c13f3cb",
+              "go": "2df4cdef-aa8a-44e4-990c-ec0709ed5574",
+              "component_type": "PointLight"
+            },
+            {
+              "_type": "component",
+              "component_id": "ce4e99dc-0e06-411c-81d8-7e1f30c91241",
+              "go": "da80b857-aeca-4bf8-a312-f2122788157a",
+              "component_type": "PointLight"
+            }
+          ]
+        },
+        {
+          "__type": "Interactable",
+          "__guid": "ec39dff3-5768-4e0d-a234-ff2b57dda137"
+        },
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "1e4639a3-f14c-4948-b768-e4948f02aa53",
           "Distance": 512,
           "DistanceAttenuation": false,
           "DistanceAttenuationOverride": false,
@@ -2753,19 +3187,25 @@
         {
           "__type": "SwitchController",
           "__guid": "07ddd7b6-81d9-4446-82d6-4717495e655b",
-          "Model": {
-            "_type": "component",
-            "component_id": "010c6203-5cfd-4e93-9cda-88e315bbe233",
-            "go": "11645219-befa-408f-a0cf-2d07a30923e4",
-            "component_type": "ModelRenderer"
-          },
+          "MaterialGroupStingOff": "off",
+          "MaterialGroupStingOn": "default",
+          "Model": [
+            {
+              "_type": "component",
+              "component_id": "010c6203-5cfd-4e93-9cda-88e315bbe233",
+              "go": "11645219-befa-408f-a0cf-2d07a30923e4",
+              "component_type": "ModelRenderer"
+            }
+          ],
           "SoundEvent": "sounds/switch/switch.sound",
-          "ToggleLight": {
-            "_type": "component",
-            "component_id": "a2555a37-aa98-4b15-a429-a03a18332783",
-            "go": "565b70b8-3524-4c36-9272-16fe672142d0",
-            "component_type": "PointLight"
-          }
+          "ToggleLight": [
+            {
+              "_type": "component",
+              "component_id": "a2555a37-aa98-4b15-a429-a03a18332783",
+              "go": "565b70b8-3524-4c36-9272-16fe672142d0",
+              "component_type": "PointLight"
+            }
+          ]
         },
         {
           "__type": "Interactable",
@@ -2965,15 +3405,15 @@
       "Enabled": true,
       "Children": [
         {
-          "__guid": "54ff3c96-f63b-4e66-9526-37e17585001c",
+          "__guid": "301f2c53-bb63-4efa-ab5e-4d9266d323ce",
           "Flags": 0,
           "Name": "ad_burger",
-          "Position": "124.4584,32.9837,28.99976",
+          "Position": "606.8907,413.3353,37.21832",
           "Enabled": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
-              "__guid": "13fca9fc-40d4-43bd-8cdc-f1b4d6a20537",
+              "__guid": "cb90c80c-b3db-4d77-9dfd-d16caf176ff2",
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
               "Model": "modelsmaterials/ad_burger.vmdl",
@@ -2988,12 +3428,12 @@
             },
             {
               "__type": "Moveable",
-              "__guid": "a41d2b00-fe87-4d73-80ec-ff3e5059eed7",
+              "__guid": "2ee71629-6d14-46c5-beb9-7c39a985eb35",
               "Weight": "Microwave"
             },
             {
               "__type": "Sandbox.Rigidbody",
-              "__guid": "4129e49a-5280-4354-b1c4-517117209acd",
+              "__guid": "d48fbc28-0486-4488-a069-d262decbfbe1",
               "AngularDamping": 0,
               "Gravity": true,
               "LinearDamping": 0,
@@ -3011,6 +3451,21 @@
               "OverrideMassCenter": false,
               "RigidbodyFlags": 0,
               "StartAsleep": false
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "4dd99e67-139b-453a-b73b-6d034e2d77f2",
+              "Center": "0,0,0.9000001",
+              "IsTrigger": false,
+              "Scale": "6.999997,6.800001,2.700002",
+              "Static": false,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "Food",
+              "__guid": "9278af0c-2da9-4a00-a147-a4e0da3f415e",
+              "FoodCycle": 5,
+              "FoodValue": 15
             }
           ]
         },
@@ -3425,6 +3880,12 @@
               "__type": "Moveable",
               "__guid": "f0cb6d40-46ea-487d-be98-732f85dbdfa4",
               "Weight": "OneLiterOfWater"
+            },
+            {
+              "__type": "Food",
+              "__guid": "d1752da4-1b2a-4b98-a75f-6fc3713174c9",
+              "FoodCycle": 2,
+              "FoodValue": 15
             }
           ]
         },
@@ -3600,7 +4061,7 @@
           "__guid": "ad1f1c10-0240-4b4b-a08f-16b5ef855109",
           "Flags": 0,
           "Name": "w_portalgun",
-          "Position": "140.2064,1.012234,2.229911",
+          "Position": "-153.0849,1.012234,16.27103",
           "Enabled": true,
           "Components": [
             {
@@ -4013,65 +4474,6 @@
               "__type": "Moveable",
               "__guid": "44f138de-8ead-4592-b4cf-7b1fdb199eda",
               "Weight": "Refrigerator"
-            }
-          ]
-        },
-        {
-          "__guid": "a141d484-28a4-4a9d-adbe-45f900bc0269",
-          "Flags": 0,
-          "Name": "table_01",
-          "Position": "434.9483,249.4593,0",
-          "Rotation": "0,0,0.7071067,0.7071068",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "8af913fc-4d6a-4b06-a268-eead93488826",
-              "BodyGroups": 18446744073709551615,
-              "CreateAttachments": false,
-              "Model": "models/props/furniture/table_01.vmdl",
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "c0eaa590-b75e-4a3d-a98f-c59d8f7528ea",
-              "IsTrigger": false,
-              "Model": "models/props/furniture/table_01.vmdl",
-              "Static": false,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "Moveable",
-              "__guid": "4b585f60-af6f-48b2-b2bd-8053e226271c",
-              "Weight": "Refrigerator"
-            },
-            {
-              "__type": "Sandbox.Rigidbody",
-              "__guid": "335d844e-f534-4894-97a1-3196f3343615",
-              "AngularDamping": 0,
-              "Gravity": true,
-              "LinearDamping": 0,
-              "Locking": {
-                "X": false,
-                "Y": false,
-                "Z": false,
-                "Pitch": false,
-                "Yaw": false,
-                "Roll": false
-              },
-              "MassCenterOverride": "0,0,0",
-              "MassOverride": 7000,
-              "MotionEnabled": true,
-              "OverrideMassCenter": false,
-              "RigidbodyFlags": 0,
-              "StartAsleep": false
             }
           ]
         },
@@ -5141,7 +5543,7 @@
       "__guid": "abea8976-7ef1-4c1a-9214-dab303ed5170",
       "Flags": 0,
       "Name": "folding_table_lod0_merge_ (1)",
-      "Position": "931.205,433.081,0.6875507",
+      "Position": "951.5032,446.4201,0.687551",
       "Rotation": "0,0,0.9999999,0.0000001490116",
       "Enabled": true,
       "Components": [
@@ -5213,8 +5615,8 @@
       "__guid": "53afc267-ff89-468b-bc39-29831e24cb8d",
       "Flags": 0,
       "Name": "folding_table_lod0_merge_ (2)",
-      "Position": "931.205,523.9517,0.6875507",
-      "Rotation": "0,0,0.9999999,0.0000001490116",
+      "Position": "910.9072,446.4199,0.6875507",
+      "Rotation": "0,0,0.0000003576279,-0.9999999",
       "Enabled": true,
       "Components": [
         {
@@ -5721,7 +6123,7 @@
       "__guid": "aea182c7-62df-4068-bb01-b306aac49c5c",
       "Flags": 0,
       "Name": "Computer",
-      "Position": "435.8773,247.9371,0",
+      "Position": "435.8773,247.9371,0.7999998",
       "Enabled": true,
       "__Prefab": "prefabs/env/computer.prefab",
       "__PrefabVariables": {}
@@ -7911,7 +8313,6 @@
                 {
                   "__type": "Sandbox.EnvmapProbe",
                   "__guid": "ba7d5b08-7c9d-4e8c-bbb4-9f2e3ac35075",
-                  "Texture": "textures/cubemaps/default2.vtex",
                   "Bounds": {
                     "Mins": "-233.4999,-394.8004,-146.6004",
                     "Maxs": "195.7999,335.7,81.29985"
@@ -7923,6 +8324,7 @@
                   "MultiBounce": false,
                   "Projection": "Box",
                   "RenderDynamically": true,
+                  "Texture": "textures/cubemaps/default2.vtex",
                   "TintColor": "1,1,1,1",
                   "UpdateStrategy": "OnEnabled",
                   "ZFar": 4096,
@@ -7940,18 +8342,76 @@
                 {
                   "__type": "Sandbox.EnvmapProbe",
                   "__guid": "33563f59-9aba-4a58-940c-bb8f3aaf1305",
-                  "Texture": "textures/cubemaps/default2.vtex",
                   "Bounds": {
                     "Mins": "-139.3409,-167.6209,-43.30299",
                     "Maxs": "147.8157,188.146,39.45747"
                   },
-                  "DelayBetweenUpdates": 0.1,
+                  "DelayBetweenUpdates": 1.46,
                   "Feathering": 0.02,
                   "FrameInterval": 5,
                   "MaxDistance": 512,
                   "MultiBounce": false,
                   "Projection": "Box",
                   "RenderDynamically": true,
+                  "Texture": "textures/cubemaps/default2.vtex",
+                  "TintColor": "1,1,1,1",
+                  "UpdateStrategy": "OnEnabled",
+                  "ZFar": 4096,
+                  "ZNear": 16
+                }
+              ]
+            },
+            {
+              "__guid": "693a7418-a42d-4ca0-8542-54cfeddfcafe",
+              "Flags": 0,
+              "Name": "Envmap Probe",
+              "Position": "113.0383,426.5339,-110.4074",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.EnvmapProbe",
+                  "__guid": "d225e1b5-1564-493a-9bca-f798bce43905",
+                  "Bounds": {
+                    "Mins": "-212.1036,-68.68304,-43.30299",
+                    "Maxs": "227.806,90.46783,39.45747"
+                  },
+                  "DelayBetweenUpdates": 1.46,
+                  "Feathering": 0.02,
+                  "FrameInterval": 5,
+                  "MaxDistance": 512,
+                  "MultiBounce": false,
+                  "Projection": "Box",
+                  "RenderDynamically": true,
+                  "Texture": "textures/cubemaps/default2.vtex",
+                  "TintColor": "1,1,1,1",
+                  "UpdateStrategy": "OnEnabled",
+                  "ZFar": 4096,
+                  "ZNear": 16
+                }
+              ]
+            },
+            {
+              "__guid": "23052c8f-91c6-4a9e-97f8-3fa5e12a2e80",
+              "Flags": 0,
+              "Name": "Envmap Probe",
+              "Position": "258.7823,686.9509,-110.4074",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.EnvmapProbe",
+                  "__guid": "05688a02-6e14-4325-a098-20e59d1ff9dd",
+                  "Bounds": {
+                    "Mins": "-72.04088,-169.1209,-43.203",
+                    "Maxs": "82.61575,188.146,39.45747"
+                  },
+                  "DelayBetweenUpdates": 1.46,
+                  "Feathering": 0.02,
+                  "FrameInterval": 5,
+                  "MaxDistance": 512,
+                  "MultiBounce": false,
+                  "Projection": "Box",
+                  "RenderDynamically": true,
+                  "Texture": "textures/cubemaps/default2.vtex",
                   "TintColor": "1,1,1,1",
                   "UpdateStrategy": "OnEnabled",
                   "ZFar": 4096,
@@ -7969,7 +8429,6 @@
                 {
                   "__type": "Sandbox.EnvmapProbe",
                   "__guid": "7787cc91-4a9c-4016-bd05-288b3495fbaf",
-                  "Texture": "textures/cubemaps/default2.vtex",
                   "Bounds": {
                     "Mins": "-81.09981,-311.3353,-63.86138",
                     "Maxs": "99.19991,341.3387,40.51105"
@@ -7981,6 +8440,7 @@
                   "MultiBounce": false,
                   "Projection": "Box",
                   "RenderDynamically": true,
+                  "Texture": "textures/cubemaps/default2.vtex",
                   "TintColor": "1,1,1,1",
                   "UpdateStrategy": "OnEnabled",
                   "ZFar": 4096,
@@ -8477,7 +8937,7 @@
       "__guid": "10fdb1f1-d08f-4165-8ec5-85cf4e248636",
       "Flags": 0,
       "Name": "generator",
-      "Position": "1102.137,-893.7665,41.0168",
+      "Position": "1091.85,-942.5589,41.0168",
       "Rotation": "0,0,-0.7071067,0.7071068",
       "Scale": "1.714595,1.714595,1.714595",
       "Enabled": true,
@@ -8509,45 +8969,11 @@
       ]
     },
     {
-      "__guid": "32fe6f04-21e3-4b71-80cd-e8f2d4ee8416",
-      "Flags": 0,
-      "Name": "generator (1)",
-      "Position": "1102.137,-639.9998,41.0168",
-      "Rotation": "0,0,-0.7071067,0.7071068",
-      "Scale": "1.714595,1.714595,1.714595",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "2b340fc2-e0f7-44a4-bd63-019835bacd11",
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "Model": "models/generator/rusted-generator/generator.vmdl",
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "72a2cd9f-071e-4c48-9847-36ee46d9b4de",
-          "Center": "0,0,0",
-          "IsTrigger": false,
-          "Scale": "81.70017,42.59999,43.49998",
-          "Static": false,
-          "SurfaceVelocity": "0,0,0"
-        }
-      ]
-    },
-    {
       "__guid": "265b80c7-685f-4234-b15c-b99a1fe717d8",
       "Flags": 0,
       "Name": "player",
-      "Position": "36.60885,-26.96175,36.1119",
+      "Position": "546.9673,283.2397,36.1119",
+      "Rotation": "0,0,0.9659259,-0.2588189",
       "Tags": "player",
       "Enabled": true,
       "__Prefab": "prefabs/player/player.prefab",
@@ -8690,6 +9116,205 @@
           "Weight": "Refrigerator"
         }
       ]
+    },
+    {
+      "__guid": "eb22fb7d-a812-42dc-9aa5-b20cab17cfe5",
+      "Flags": 0,
+      "Name": "table",
+      "Position": "433.4862,248.3586,0.07660982",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "0120d490-dd1d-4297-88b5-e46c023ac6bb",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "Model": "models/table/table.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "4cf3e315-81bb-4649-8fca-f5580318a9de",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 10000,
+          "MotionEnabled": true,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Moveable",
+          "__guid": "e68a107e-e82e-4833-8ad6-fee47414dd90",
+          "Weight": "Refrigerator"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "3fff78f7-8b42-4ec4-aee4-3f82a19797ce",
+          "Center": "0,0,28.40001",
+          "IsTrigger": false,
+          "Scale": "34.49998,61.99997,1.8",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "98b0ac1a-d852-411a-b040-90cf5cdcdca8",
+          "Center": "0.2000054,27.40001,13.3",
+          "IsTrigger": false,
+          "Scale": "31.00001,3.200006,26.7",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "764c9761-cb09-49ba-a819-f9b967e14bf4",
+          "Center": "0.2000054,-27.4,13.3",
+          "IsTrigger": false,
+          "Scale": "31.00001,3.2,26.7",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ]
+    },
+    {
+      "__guid": "091f979c-f514-4ee3-befb-55c5d01be428",
+      "Flags": 0,
+      "Name": "_beer_m",
+      "Position": "602.9175,400.8733,44.98833",
+      "Scale": "0.5976141,0.5976141,0.5976141",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "ffcd5d37-bd16-44b8-a454-83a84df6a86b",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "models/beer/_beer_m.vmdl",
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Food",
+          "__guid": "b2bc6408-cd96-4e15-875b-539c6a7852cb",
+          "FoodCycle": 5,
+          "FoodValue": 15
+        },
+        {
+          "__type": "Moveable",
+          "__guid": "7ac44582-1bf2-45ab-9b24-876a64f5c60f",
+          "Weight": "OneLiterOfWater"
+        }
+      ]
+    },
+    {
+      "__guid": "d195565d-ffbd-4b58-844a-db14062c037e",
+      "Flags": 0,
+      "Name": "can_small",
+      "Position": "605.8778,386.3431,34.94601",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "6ddd9981-a2da-421b-aecd-99bf683266c3",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "models/props/packaged_food/can_small.vmdl",
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Moveable",
+          "__guid": "4ac4f87a-42cc-4fd4-a25e-8478db79c89a",
+          "Weight": "OneLiterOfWater"
+        },
+        {
+          "__type": "Food",
+          "__guid": "c5fa3606-c5bd-4ed2-83e0-36a9e54e641d",
+          "FoodCycle": 5,
+          "FoodValue": 15
+        }
+      ]
+    },
+    {
+      "__guid": "fe06870e-b30f-48b1-9713-2b9fbd8821d7",
+      "Flags": 0,
+      "Name": "hotdog",
+      "Position": "614.6212,390.8336,35.14943",
+      "Scale": "2.184233,2.184233,2.184233",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "67841dbd-07ca-4c60-b646-4c6e77640e4f",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "models/3dmodelscc0/food\u0026drinkspack/hotdog/hotdog.vmdl",
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Moveable",
+          "__guid": "89f8c06c-2eff-4775-b288-4607a73e2632",
+          "Weight": "OneLiterOfWater"
+        },
+        {
+          "__type": "Food",
+          "__guid": "776b0503-c296-45be-9c4d-fa10f851503e",
+          "FoodCycle": 5,
+          "FoodValue": 15
+        }
+      ]
+    },
+    {
+      "__guid": "79689b9d-0689-4482-8bd9-981704e822e8",
+      "Flags": 0,
+      "Name": "can",
+      "Position": "596.7807,384.172,34.94601",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "2dc2376b-1135-47d3-a57c-7bd3dfc3cec4",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "Model": "models/consumables/can/can.vmdl",
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Moveable",
+          "__guid": "6d9f4bc8-2ab2-4a6a-ab36-4e5930adf136",
+          "Weight": "OneLiterOfWater"
+        },
+        {
+          "__type": "Food",
+          "__guid": "5578f131-9910-4b25-aaca-61519c317abd",
+          "FoodCycle": 5,
+          "FoodValue": 15
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -8727,6 +9352,7 @@
     "creation.cart_ramendevil#12785",
     "eurorp.door01_left#9936",
     "exorealms.locker_room_shower#57739",
+    "facepunch.can_small#54510",
     "facepunch.cereal_open#55837",
     "facepunch.office_screen_01#43555",
     "facepunch.toilet_a_base#33686",
@@ -8740,6 +9366,7 @@
     "fish.2000_monitor#58965",
     "fish.2000_mouse#58963",
     "fish.cabinet_bottom_sink#58977",
+    "fish.can#58981",
     "fish.office_chair#59009",
     "fish.radio#57879",
     "fish.refrigerator#59016",
@@ -8756,6 +9383,7 @@
     "mapperskai.folding_table_lod0_merge_#26697",
     "meihoff.rustybed#24784",
     "nerd.dingus#11094",
+    "progressgames._beer_m#54522",
     "rust.creeping_plant_pipe_100x600#25075",
     "rust.pipe_pile_a#25243",
     "rust.pipeline_100x300_bend#25228",
@@ -8769,7 +9397,8 @@
     "tfassets.ceiling_pipe06_thin#21022",
     "tfassets.computer_wall_large_cabinet#20562",
     "tfassets.vent_system_straight_256_small#22836",
-    "tfassets.vent_system_straight_512#22837"
+    "tfassets.vent_system_straight_512#22837",
+    "titanovsky.hotdog#53769"
   ],
   "__version": 2
 }

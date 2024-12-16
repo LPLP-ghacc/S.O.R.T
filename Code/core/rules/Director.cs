@@ -110,20 +110,15 @@ public sealed class Director : Component
 		GameObject.Name = "GAME DIRECTOR";
 
 		var arr = GetNumberArrayByTime( CurrentTime );
-
-		foreach ( var item in arr )
-		{
-			Log.Info( item );
-		}
 	}
 
 	protected override void OnUpdate()
 	{
 		base.OnUpdate();
 
-		CurrentTime = DateTime.Now.TimeOfDay;
+		CurrentTime = DateTime.UtcNow.TimeOfDay;
 
-		STRCurrentTime = DateTime.Now.ToString( "HH:mm:ss" );
+		STRCurrentTime = DateTime.UtcNow.ToString( "HH:mm:ss" );
 
 		if ( CurrentTime >= TimeSpan.FromHours( 6 ) && CurrentTime < TimeSpan.FromHours( 12 ) )
 		{

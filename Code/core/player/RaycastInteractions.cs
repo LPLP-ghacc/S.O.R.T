@@ -50,9 +50,13 @@ public sealed class RaycastInteractions : Component
 	[Property]
 	public float TimeToArrive { get; set; } = 0.5f;
 
+	[Property]
+	public float InteractTimeCycle { get; set; } = 1f;
+
+	[Property]
+	public float CurrentInteractTimeCycle { get; set; } = 0f;
+
 	private PlayerGameController gameController;
-	//private bool isManualRotate = false;
-	//private Angles manualRotateAngles;
 
 	protected override void OnEnabled()
 	{
@@ -68,12 +72,17 @@ public sealed class RaycastInteractions : Component
 
 	protected override void OnFixedUpdate()
 	{
-		if ( !EnableInteract )
-			return;
+		if( CurrentInteractTimeCycle > 0 )
+		{
+			CurrentInteractTimeCycle -= Time.Delta;
+
+			if(CurrentInteractTimeCycle <= 0 )
+			{
+				EnableInteract = true;
+			}
+		}
 
 		CurrentGameObject = GetObj();
-
-
 		
 		if ( Input.Down( OnMovingKey ) )
 		{
@@ -152,7 +161,7 @@ public sealed class RaycastInteractions : Component
 			}
 		}
 
-		if ( Input.Down( InteractKey ) )
+		if ( Input.Released( InteractKey ) && CurrentInteractTimeCycle <= 0 )
 		{
 			var tr = Scene.Trace
 				.Ray( new Ray( TargetCamera.WorldPosition, TargetCamera.Transform.World.Forward ), MinMovingDistance )
@@ -167,6 +176,10 @@ public sealed class RaycastInteractions : Component
 						var interactable = (IInteractable)item;
 
 						interactable?.Interact(GetComponent<PlayerGameController>());
+
+						CurrentInteractTimeCycle = InteractTimeCycle;
+
+						EnableInteract = false;
 					}
 				}
 			}

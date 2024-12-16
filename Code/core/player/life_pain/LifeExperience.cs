@@ -10,6 +10,8 @@ public enum LifePain
 
 public sealed class LifeExperience : Component
 {
+	public static LifeExperience Instance { get; private set; }
+
 	[Property, ReadOnly] public float Health { get; set; } = 100;
 	[Property, ReadOnly] public float Starvation { get; set; } = 100;
 	[Property, ReadOnly] public float Sleepiness { get; set; } = 100;
@@ -23,6 +25,8 @@ public sealed class LifeExperience : Component
 		base.OnStart();
 
 		_ui = UiController.Instance;
+
+		Instance = this;
 	}
 
 	protected override void OnUpdate()
@@ -51,7 +55,14 @@ public sealed class LifeExperience : Component
 
 	public void AddStarvation( float value )
 	{
-
+		if( Starvation + value > 100 )
+		{
+			Starvation = 100;
+		}
+		else
+		{
+			Starvation += value;
+		}
 	}
 
 	public void AddSleepiness( float value )

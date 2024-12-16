@@ -14,13 +14,22 @@ public sealed class SwitchController : Component, IInteractable
 	public Interactable Interactable { get; set; }
 
 	[Property]
-	public Light ToggleLight { get; set; }
+	public List<Light> ToggleLight { get; set; } = new List<Light>();
 
 	/// <summary>
 	/// Might be NULL
 	/// </summary>
 	[Property]
-	public ModelRenderer Model { get; set; } = null;
+	public List<ModelRenderer> Model { get; set; } = new List<ModelRenderer>();
+
+	[Property]
+	public string MaterialGroupStingOff { get; set; } = "";
+
+	[Property]
+	public string MaterialGroupStingOn { get; set; } = "";
+
+	[Property]
+	public EnvmapProbe Probe { get; set; }
 
 	private float TimerCooldown { get; set; } = 0.3f;
 
@@ -53,22 +62,32 @@ public sealed class SwitchController : Component, IInteractable
 		if ( !enableInteraction )
 			return;
 
-		if( Model != null )
-		{
-			if ( State )
-			{
-				Model.MaterialGroup = "off";
-			}
-			else
-			{
-				Model.MaterialGroup = "default";
-			}
-		}
-
 		State = !State;
 
 		Sound.StartSound();
-		ToggleLight.Enabled = State;
+
+		foreach ( Light light in ToggleLight )
+		{
+			light.Enabled = State;
+		}
+
+		if( Probe != null )
+		{
+			Probe.Enabled = State;
+		}
+
+		foreach (var model in Model )
+		{
+			if ( State )
+			{
+				model.MaterialGroup = MaterialGroupStingOn;
+
+			}
+			else
+			{
+				model.MaterialGroup = MaterialGroupStingOff;
+			}
+		}
 
 		jumpTimer = TimerCooldown;
 		enableInteraction = false;
