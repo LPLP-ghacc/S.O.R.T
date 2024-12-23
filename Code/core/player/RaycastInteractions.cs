@@ -4,6 +4,13 @@ using System;
 [Group( "Player" )]
 public sealed class RaycastInteractions : Component
 {
+	public static RaycastInteractions Instance { get; private set; }
+
+	[Property, ReadOnly]
+	public bool IsMove { get; set; } = false;
+
+	public bool EnableObjectMove { get; set; } = true;
+
 	[Property]
 	public bool EnableInteract { get; set; } = true;
 
@@ -58,6 +65,13 @@ public sealed class RaycastInteractions : Component
 
 	private PlayerGameController gameController;
 
+	protected override void OnStart()
+	{
+		base.OnStart();
+
+		Instance = this;
+	}
+
 	protected override void OnEnabled()
 	{
 		gameController = GameObject.GetComponent<PlayerGameController>();
@@ -83,42 +97,9 @@ public sealed class RaycastInteractions : Component
 		}
 
 		CurrentGameObject = GetObj();
-		
-		if ( Input.Down( OnMovingKey ) )
-		{
-			if ( MoveController != null )
-			{
-				MoveController.GameObject.Tags.Add( PropTag );
-				WithoutTags.Add( PropTag );
-		
-				var tr = Scene.Trace
-					.Ray( new Ray( TargetCamera.WorldPosition, TargetCamera.Transform.World.Forward ), CurrentMovingDistance )
-					.WithoutTags( WithoutTags.ToArray() )
-					.Run();
-		
-				ObjectMoveMouseWheelHandler();
-		
-				MoveController.MoveTo( tr.EndPosition, TimeToArrive );
-				MoveController.RotateTo( WorldRotation, TimeToArrive );
-		
-				if ( Input.Down( ThrowKey ) )
-				{
-					Vector3 direction = Input.AnalogMove.Normal * Rotation.FromYaw( gameController.MouseAngles.yaw );
-		
-					MoveController.Throw( direction * ThrowForce );
-					MoveController = null;
-		
-					WithoutTags.Remove( PropTag );
-				}
-			}
-		}
-		
-		if ( Input.Released( OnMovingKey ) )
-		{
-			MoveController = null;
-		
-			WithoutTags.Remove( PropTag );
-		}
+
+		if( EnableObjectMove )
+			ObjectMove();
 	}
 
 	private void ObjectMoveMouseWheelHandler()
@@ -138,13 +119,56 @@ public sealed class RaycastInteractions : Component
 		}
 	}
 
+	private void ObjectMove()
+	{
+		if ( Input.Down( OnMovingKey ) )
+		{
+			IsMove = true;
+
+			if ( MoveController != null )
+			{
+				MoveController.GameObject.Tags.Add( PropTag );
+				WithoutTags.Add( PropTag );
+
+				var tr = Scene.Trace
+					.Ray( new Ray( TargetCamera.WorldPosition, TargetCamera.Transform.World.Forward ), CurrentMovingDistance )
+					.WithoutTags( WithoutTags.ToArray() )
+					.Run();
+
+				ObjectMoveMouseWheelHandler();
+
+				MoveController.MoveTo( tr.EndPosition, TimeToArrive );
+				MoveController.RotateTo( WorldRotation, TimeToArrive );
+
+				if ( Input.Down( ThrowKey ) )
+				{
+					Vector3 direction = Input.AnalogMove.Normal * Rotation.FromYaw( gameController.MouseAngles.yaw );
+
+					MoveController.Throw( direction * ThrowForce );
+					MoveController = null;
+
+					WithoutTags.Remove( PropTag );
+				}
+			}
+		}
+		else
+		{
+			IsMove = false;
+		}
+
+		if ( Input.Released( OnMovingKey ) )
+		{
+			MoveController = null;
+
+			WithoutTags.Remove( PropTag );
+		}
+	}
+
 	private GameObject GetObj()
 	{
 		if ( Input.Down( MoveKey ) )
 		{
-			var tr = Scene.Trace
-				.Ray( new Ray( TargetCamera.WorldPosition, TargetCamera.Transform.World.Forward ), MinMovingDistance )
-				.Run();
+			var tr = TraceIt();
 
 			if ( tr.Hit )
 			{
@@ -163,28 +187,39 @@ public sealed class RaycastInteractions : Component
 
 		if ( Input.Released( InteractKey ) && CurrentInteractTimeCycle <= 0 )
 		{
-			var tr = Scene.Trace
-				.Ray( new Ray( TargetCamera.WorldPosition, TargetCamera.Transform.World.Forward ), MinMovingDistance )
-				.Run();
+			var tr = TraceIt();
 
 			if ( tr.Hit )
 			{
-				foreach ( var item in tr.GameObject.Components.GetAll() )
-				{
-					if ( item is IInteractable )
-					{
-						var interactable = (IInteractable)item;
-
-						interactable?.Interact(GetComponent<PlayerGameController>());
-
-						CurrentInteractTimeCycle = InteractTimeCycle;
-
-						EnableInteract = false;
-					}
-				}
+				Interact( tr );
 			}
 		}
 
 		return null;
+	}
+
+	private void Interact(SceneTraceResult traceResult)
+	{
+		foreach ( var item in traceResult.GameObject.Components.GetAll() )
+		{
+			if ( item is IInteractable && !IsMove )
+			{
+				var interactable = (IInteractable)item;
+
+				interactable?.Interact( GetComponent<PlayerGameController>() );
+
+				CurrentInteractTimeCycle = InteractTimeCycle;
+
+				EnableInteract = false;
+			}
+		}
+	}
+
+	private SceneTraceResult TraceIt()
+	{
+		return Scene.Trace
+				.Ray( new Ray( TargetCamera.WorldPosition, TargetCamera.Transform.World.Forward ), MinMovingDistance )
+				.Run();
+
 	}
 }

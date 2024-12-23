@@ -88,6 +88,7 @@
       {
         "__type": "Sandbox.MotionBlur",
         "__guid": "b08931ac-729a-4504-8f1b-78e66a6d6bf8",
+        "__enabled": false,
         "Samples": 16,
         "Scale": 0.05
       },
@@ -139,6 +140,15 @@
             "__guid": "5d7434bc-5d32-4680-9f28-352989d90dab"
           }
         ]
+      },
+      {
+        "__guid": "2c985698-1482-4321-bd6e-26410e73842e",
+        "Flags": 0,
+        "Name": "Hands",
+        "Position": "10.40471,0,-6.234189",
+        "Enabled": true,
+        "__Prefab": "prefabs/player/hands.prefab",
+        "__PrefabVariables": {}
       }
     ],
     "__variables": [],

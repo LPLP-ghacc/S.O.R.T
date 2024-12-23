@@ -43,6 +43,8 @@
           "EnableCollision": true,
           "MapName": "map/bunker_08.vmap",
           "NoOrigin": false,
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
           "UseMapFromLaunch": false
         }
       ],
@@ -8937,8 +8939,8 @@
       "__guid": "10fdb1f1-d08f-4165-8ec5-85cf4e248636",
       "Flags": 0,
       "Name": "generator",
-      "Position": "1091.85,-942.5589,41.0168",
-      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Position": "1245.289,-580.3622,41.0168",
+      "Rotation": "0,0,0.7071067,0.7071068",
       "Scale": "1.714595,1.714595,1.714595",
       "Enabled": true,
       "Components": [
@@ -8965,6 +8967,51 @@
           "Scale": "81.70017,42.59999,43.49998",
           "Static": false,
           "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "ElectricityGenerator",
+          "__guid": "57b1d48c-bd39-4df9-bf0e-46108e5070c6",
+          "Power": "None"
+        }
+      ]
+    },
+    {
+      "__guid": "183d235a-03e6-4174-9205-1f316e6e4b85",
+      "Flags": 0,
+      "Name": "generator (1)",
+      "Position": "1245.289,-806.5556,41.0168",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Scale": "1.714595,1.714595,1.714595",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "773bceaf-1d98-42ac-a173-a6f90480cd71",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "Model": "models/generator/rusted-generator/generator.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "f49726a5-acc3-43b0-b8aa-800c202916c3",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "81.70017,42.59999,43.49998",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "ElectricityGenerator",
+          "__guid": "4df54dff-c5d6-458c-9739-8f8144372f6f",
+          "Power": "None"
         }
       ]
     },
@@ -9198,7 +9245,7 @@
       "__guid": "091f979c-f514-4ee3-befb-55c5d01be428",
       "Flags": 0,
       "Name": "_beer_m",
-      "Position": "602.9175,400.8733,44.98833",
+      "Position": "602.9175,400.8733,41.1898",
       "Scale": "0.5976141,0.5976141,0.5976141",
       "Enabled": true,
       "Components": [
@@ -9313,6 +9360,82 @@
           "__guid": "5578f131-9910-4b25-aaca-61519c317abd",
           "FoodCycle": 5,
           "FoodValue": 15
+        }
+      ]
+    },
+    {
+      "__guid": "990d03e6-a261-4b02-a443-780fe43a569c",
+      "Flags": 0,
+      "Name": "flashlight",
+      "Position": "613.4933,405.7835,40.85151",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "f855c2a8-75f7-4d22-8c94-9bc1b6780417",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "MaterialGroup": "default",
+          "Model": "models/flashlight/source/flashlight.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "48355e11-fe2f-4262-8f0b-676cbd9a76b0",
+          "IsTrigger": false,
+          "Model": "models/flashlight/source/flashlight.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "fcaa9259-6cf0-404e-9087-cc8ed5893966",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Item",
+          "__guid": "858046f1-7b7a-4e9e-b151-0605ebb3ad65",
+          "ItemId": 1,
+          "Description": "Allows you to see things hidden in the dark",
+          "HandPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/inv/flashlight.prefab"
+          },
+          "IsUseable": true,
+          "ModelImg": "textures/items/reach.png",
+          "Name": "Flashlight"
+        },
+        {
+          "__type": "Moveable",
+          "__guid": "f5e6881d-444f-4f89-a15a-52adc23a8d85",
+          "Weight": "OneLiterOfWater"
+        },
+        {
+          "__type": "Interactable",
+          "__guid": "403a62b7-73ad-4ffa-a339-f617a6678009"
         }
       ]
     }

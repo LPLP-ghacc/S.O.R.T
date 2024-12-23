@@ -82,10 +82,14 @@ public sealed class UiController : Component
 	[Property]
 	public IngameMenu Menu { get; set; }
 
+	public SceneCamera GetPlayerCamera()
+	{
+		return GetComponent<SceneCamera>();
+	}
+
 	protected override void OnAwake()
 	{
-		if( Instance == null)
-			Instance = this;
+		Instance = this;
 
 		GameObject.Tags.Add("UI");
 		base.OnAwake();
@@ -99,7 +103,7 @@ public sealed class UiController : Component
 
 	public void GetHSSLEPValues(LifeExperience experience) 
 	{
-		//Menu.Health = MathF.Round( experience.Health );
+		Menu.Health = MathF.Round( experience.Health ).ToString();
 		Menu.Starvation = experience.Starvation.ToString();
 		//Menu.Sleepiness = )athF.Round( experience.Sleepiness );
 	}

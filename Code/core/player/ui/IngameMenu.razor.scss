@@ -16,6 +16,21 @@ IngameMenu {
 		flex-direction: column;
 		justify-content: center;
 		height: 100vh;
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.crosshair {
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		border: 2px solid groove;
+		border-radius: 50%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
 	}
 
 	.header {

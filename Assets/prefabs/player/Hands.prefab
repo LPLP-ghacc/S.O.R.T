@@ -1,0 +1,67 @@
+{
+  "RootObject": {
+    "__guid": "67776f71-6bc4-4985-b6e1-65e3051be3dc",
+    "Flags": 0,
+    "Name": "hands",
+    "Enabled": true,
+    "Children": [
+      {
+        "__guid": "e9b0ca97-ee00-43a1-8d82-bc119d0b9e46",
+        "Flags": 0,
+        "Name": "LHAND",
+        "Position": "0,5.118154,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Hand",
+            "__guid": "31832b46-32b8-4997-999a-43a4e6e3ec8d"
+          }
+        ]
+      },
+      {
+        "__guid": "a9c15b0f-53ac-4696-9dad-d14810a94e00",
+        "Flags": 0,
+        "Name": "RHAND",
+        "Position": "0,-5.118,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Hand",
+            "__guid": "8e21c48e-42b0-48ae-a721-1bee1af1ff8f"
+          }
+        ]
+      }
+    ],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

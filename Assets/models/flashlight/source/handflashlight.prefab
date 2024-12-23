@@ -1,0 +1,32 @@
+{
+  "RootObject": {
+    "__guid": "7e18cbbf-ce4c-41f3-8a8f-f537ee806ae1",
+    "Flags": 0,
+    "Name": "flashlight",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "1371eb0a-eb29-41d1-838a-0377e51a7f72",
+        "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
+        "Model": "models/flashlight/source/flashlight.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

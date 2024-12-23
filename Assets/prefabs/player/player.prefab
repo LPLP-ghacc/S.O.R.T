@@ -38,6 +38,7 @@
         "EnableInteract": true,
         "InteractKey": "use",
         "InteractTimeCycle": 0,
+        "IsMove": false,
         "MaxMovingDistance": 105,
         "MinMovingDistance": 60,
         "MouseMoveAcceleration": 5,
@@ -99,39 +100,13 @@
       },
       {
         "__type": "PlayerInventory",
-        "__guid": "530101f4-553d-4478-a84e-2d4c617d441c"
+        "__guid": "530101f4-553d-4478-a84e-2d4c617d441c",
+        "Left": null,
+        "Right": null,
+        "Slots": []
       }
     ],
-    "Children": [
-      {
-        "__guid": "67776f71-6bc4-4985-b6e1-65e3051be3dc",
-        "Flags": 0,
-        "Name": "Hands",
-        "Enabled": true,
-        "Children": [
-          {
-            "__guid": "e9b0ca97-ee00-43a1-8d82-bc119d0b9e46",
-            "Flags": 0,
-            "Name": "L",
-            "Position": "-14.08759,14.37795,0",
-            "Enabled": true,
-            "Components": [
-              {
-                "__type": "Hand",
-                "__guid": "31832b46-32b8-4997-999a-43a4e6e3ec8d"
-              }
-            ]
-          },
-          {
-            "__guid": "a9c15b0f-53ac-4696-9dad-d14810a94e00",
-            "Flags": 0,
-            "Name": "R",
-            "Position": "11.64277,14.37795,0",
-            "Enabled": true
-          }
-        ]
-      }
-    ],
+    "Children": [],
     "__variables": [],
     "__properties": {
       "FixedUpdateFrequency": 50,

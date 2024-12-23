@@ -1,0 +1,71 @@
+{
+  "RootObject": {
+    "__guid": "7e18cbbf-ce4c-41f3-8a8f-f537ee806ae1",
+    "Flags": 0,
+    "Name": "flashlight",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "InvFlashlight",
+        "__guid": "211c1837-8c28-4d4f-960e-1f321b0d7b75"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "f1499893-48e6-4082-a783-86e56c25e718",
+        "Flags": 0,
+        "Name": "flashlight",
+        "Rotation": "0,0,1,0.0000001947072",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "f3ca6b0c-3fcc-418d-b513-58853ed1d9ea",
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "Model": "models/flashlight/source/flashlight.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

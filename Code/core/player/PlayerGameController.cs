@@ -23,7 +23,7 @@ public class CameraClamp
 	/// </summary>
 	public CameraClamp()
 	{
-		PY = 80f; NY = -20f;
+		PY = 80f; NY = -60f;
 	}
 
 	public float PY { get; set; }
@@ -303,11 +303,8 @@ public sealed class PlayerGameController : Component
 
 	public SceneTraceResult BuildRaytrace( Vector3 from, Vector3 to, string[] withoutTags )
 	{
-		//var bbox = BBox.FromPositionAndSize( Vector3.Zero, 1 );
-
 		return Scene.Trace
 		.Ray( new Ray( from, to ), GroundBoxSize.z )
-		//.Size( bbox )
 		.WithoutTags( withoutTags )
 		.Run();
 	}
